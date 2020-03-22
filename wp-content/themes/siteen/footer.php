@@ -4,25 +4,27 @@
 				<div class="footer-left">
 					<div class="logo-wrap">
 						<a href="#HEADER" class="logo-link">
-							<img src="<?php echo bloginfo(template_url); ?>/assets/img/logo_04.png" alt="Logo">
+							<div class="logo-link footer-logo" >
+								<?php the_custom_logo(); ?>
+							</div>
 						</a>
 					</div>
 					<div class="copy">
-						<p class="copyright">© 2020 Siteen</p>
-						<p class="slogan">“make your dreams come true”</p>
+						<p class="copyright"><?php the_field('siteen_footer'); ?></p>
+						<p class="slogan"><?php the_field('slogan_footer'); ?></p>
 					</div>
 					<div class="social-links">
 						<p>
-							<a href="https://www.facebook.com/aleksandr.zabrodskyi" target="_blank">
+							<a href="<?php the_field('social_facebook_footer'); ?>" target="_blank">
 								<img src="<?php echo bloginfo(template_url); ?>/assets/img/icon_1.svg">
 							</a>
-							<a href="https://www.instagram.com/siteen.tech/?hl=ru" target="_blank">
+							<a href="<?php the_field(' social_instagram_footer'); ?>" target="_blank">
 								<img src="<?php echo bloginfo(template_url); ?>/assets/img/icon_2.svg" target>
 							</a>
-							<a href="#">
+							<a href="<?php the_field('social_linkedin_footer'); ?>" target="_blank">
 								<img src="<?php echo bloginfo(template_url); ?>/assets/img/icon_3.svg">
 							</a>
-							<a href="https://t.me/keysamm" target="_blank">
+							<a href="<?php the_field('social_telegram_footer'); ?>" target="_blank">
 								<img src="<?php echo bloginfo(template_url); ?>/assets/img/icon_4.svg">
 							</a>
 						</p>
@@ -30,23 +32,26 @@
 				</div>
 				<div class="footer_right">
 					<h2>
-						Связаться с нами
+						<?php the_field('contact_text_footer'); ?>
 					</h2>
 					<p class="email">
 						<a href="http://gmail.com" target="_blank">
-							siteen.co@gmail.com
+							<?php the_field('contact_email_footer'); ?>
 						</a>
 					</p>
 					<p class="tel">
-						<a href="tel:+380971630202">
-							+380 97 163 02 02
+						<a href="tel:+380962360598">
+							<?php the_field('contact_tell_footer'); ?>
+						</a>
+						<a href="tel:+380997439179">
+							<?php the_field('contact_tell2_footer'); ?>
 						</a>
 					</p>
 					<h2 class="location">
-						Местоположение
+						<?php the_field('location_text_footer'); ?>
 					</h2>
 					<p>
-						Lviv, Ukraine
+						<?php the_field('location_footer'); ?>
 					</p>
 				</div>
 			</div>
@@ -54,15 +59,14 @@
 		</div>
 	</footer>
 	
-	<script src='js/jquery.min.js'></script>
-	<script src="js/script.js"></script>
-	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-	<script src="js/preloader.js"></script>
+	<?php wp_footer(); ?>
+
+	<!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></a>
 	<script>
   		AOS.init({
 			  once: true
 		  });
-	</script>
+	</script> -->
 </body>
 
 </html>

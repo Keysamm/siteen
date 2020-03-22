@@ -28,6 +28,7 @@ Theme Name: Siteen
     height: 500px;
 }
 
+
 /* @keyframes Scale {
     25% {
         transform: scale(-1.2, 1.2)
@@ -227,7 +228,7 @@ header {
 
 header .wrap_left .section {
     position: relative;
-    top: 30vh;
+    top: 21vh;
     transform: translateY(-20%);
 
 }
@@ -770,20 +771,48 @@ header .wrap_left .section .link:hover,
     position: relative;
 }
 
+.inner_container .block_see_all {
+    float: right;
+    display: block;
+    position: relative;
+    margin-left: 244px;
+}
+
 .our_projects .block_see_all a {
     color: #ebb054;
     font-size: 18px;
     letter-spacing: -0.36px;
 }
 
+.inner_container .block_see_all a {
+    color: #ebb054;
+    font-size: 18px;
+    letter-spacing: -0.36px;
+}
+
+
 .our_projects .block_see_all a::after {
     margin-left: 25px;
     text-align: center;
     content: ">";
-    line-height: 100px;
+    line-height: 85px;
     display: inline-block;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
+    color: #000;
+    background: #fff;
+    font-size: 20px;
+}
+
+
+.inner_container .block_see_all a::after {
+    margin-left: 25px;
+    text-align: center;
+    content: ">";
+    line-height: 85px;
+    display: inline-block;
+    width: 80px;
+    height: 80px;
     color: #000;
     background: #fff;
     font-size: 20px;
@@ -1181,7 +1210,7 @@ header .wrap_left .section .link:hover,
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background: url("images/moon.png");
+    background: url("assets/img/moon.png");
 }
 
 .get_in_touch .flex_container .wrap_form::after {
@@ -1419,8 +1448,19 @@ footer .slogan {
 
 .logo-link img {
     display: block;
-    width: 29%;
+    width: 30%;
+    height: 30%;
     margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.footer-logo img {
+    display: block;
+    width: 37%;
+    height: 37%;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    margin-left: -10px;
 }
 
 footer p a {
@@ -1466,6 +1506,7 @@ footer p a:hover img {
 .tel a:hover {
     color: rgb(110, 44, 0);
 }
+
 
 
 
@@ -1576,7 +1617,7 @@ footer p a:hover img {
 
     .who_we_are {
         padding-top: 50px;
-        padding-bottom: 0px;
+        padding-bottom: 40px;
     }
 
     .who_we_are::before {
@@ -1857,7 +1898,7 @@ footer p a:hover img {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 769px) {
 
 	#preloaders {
     	transform: translateY(240px);
@@ -2846,6 +2887,7 @@ footer p a:hover img {
         font-size: 20px;
     }
 }
+
 
 
 @media (max-width: 347px) {

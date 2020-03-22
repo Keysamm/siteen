@@ -10,33 +10,35 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 	<!-- Favicon -->
 	<link rel="icon" href="<?php echo bloginfo(template_url); ?>/assets/img/favicon-96x96.png" type="image/x-icon">
-	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<?php wp_head(); ?>
 </head>
 
 <body>
 	<!-- Preloader-->
-	<div id='preloader'>
+	<!-- <div id='preloader'>
 		<div id="loader"></div>
   		<i 	id='preloaders'>
 			<img src="<?php echo bloginfo(template_url); ?>/assets/img/gif_logo_03.gif" alt="Loader">
 		</i>
-	</div>
+	</div> -->
+	
 	
 	<header id="HEADER">
 		<div class="container">
 			<div class="wrap_left">
 				<div class="logo-wrap">
-						<?php the_custom_logo(); ?>
+						<a href="#HEADER" class="logo-link">
+							<div class="logo-link" >
+								<?php the_custom_logo(); ?>
+							</div>
+						</a>
 				</div>
 				<div class="section" >
-					<p class="work">UX, DEV, WEBSITES, APPS</p>
+					<p class="work"><?php the_field('services_header'); ?></p>
 					<h2>
-						Наша ключевая задача – <br>
-						<span>создать сайт,</span>
+						<?php the_field('tagline_header'); ?>
 					</h2>
-					<p class="info">который станет огромным толчком в развитии вашего бизнеса. Основные инструменты –
-						это современные технологии и профессионализм веб-разработчиков.</p>
+					<p class="info"><?php the_field('text_tagline_header'); ?></p>
 					<a class="link" href="#ORDER">Сделать заказ
 					</a>
 					
@@ -86,13 +88,11 @@
 						</nav>
 					</div>
 					<div class="section" >
-					<p class="work">UX, DEV, WEBSITES, APPS</p>
+					<p class="work"><?php the_field('services_header'); ?></p>
 					<h2>
-						Наша ключевая задача – <br>
-						<span>создать сайт,</span>
+						<?php the_field('tagline_header'); ?>
 					</h2>
-					<p class="info">который станет огромным толчком в развитии вашего бизнеса. Основные инструменты –
-						это современные технологии и профессионализм веб-разработчиков.</p>
+					<p class="info"><?php the_field('text_tagline_header'); ?></p>
 					<a class="link" href="#ORDER">Сделать заказ
 					</a>
 				</div>

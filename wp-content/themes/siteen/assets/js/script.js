@@ -1,26 +1,54 @@
-$('#block').hover(function(){
-	$('.add_desc').addClass('d-none');
-}, function() {
-	$('.add_desc').removeClass('d-none');
-});
 
-$('#none').hover(function(){
-	$('.add_desc_2').addClass('d-none');
-}, function() {
-	$('.add_desc_2').removeClass('d-none');
-});
+let $block = document.querySelector('#block')
+let $desc = document.querySelector('.add_desc')
+let $none = document.querySelector('#none')
+let $desc2 = document.querySelector('.add_desc_2')
+
+$block.addEventListener('mouseover', onHover)
+$block.addEventListener('mouseout', outHover)
+function onHover() {
+  $desc.classList.add('d-none')
+}
+
+function outHover() {
+  $desc.classList.remove('d-none')
+}
 
 
-$('.link-js').bind('click', function (e) {
+
+$none.addEventListener('mouseover', onHoverr)
+$none.addEventListener('mouseout', outHoverr)
+function onHoverr() {
+  $desc2.classList.add('d-none')
+}
+
+function outHoverr() {
+  $desc2.classList.remove('d-none')
+}
+
+
+// let $link = document.querySelector('.link-js')
+// let html = document.getElementsByTagName('html')
+// let body = document.getElementsByTagName('body')
+// $link.addEventListener('click', onLink)
+
+// function onLink(e) {
+//   e.preventDefault();
+//   let target = this.getAttribute("href")
+//   html.
+// }
+
+
+jQuery('.link-js').on('click', function (e, $) {
     e.preventDefault();
     let target = $(this).attr("href");
 
     $('html, body').stop().animate({
         scrollTop: $(target).offset().top
-    }, 1000, function () {
+    }, 1000, function ($) {
         location.hash = target;
     });
-    if ($(window).width() < 1500) {
+    if (jQuery(window).width() < 1100) {
         $('.mobile-menu').removeClass('active');
         $('.hamb').removeClass('active');
         $('body').removeClass('fix');
@@ -33,8 +61,10 @@ $('.link-js').bind('click', function (e) {
 
 
 
-$(document).ready(function () { 
-  $('.menu-link').on('click', function(e) {
+
+
+jQuery(document).ready(function ($) { 
+  $('.menu-link').on('click', function(e,) {
     e.preventDefault();
     $(this).toggleClass('active');
     $('.menu-link').toggleClass('burger');
